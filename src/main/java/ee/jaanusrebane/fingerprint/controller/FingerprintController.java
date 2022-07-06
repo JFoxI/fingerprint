@@ -28,7 +28,7 @@ public class FingerprintController {
     }
 
     @RequestMapping(value = "fingerprint")
-    public byte[] addFingerprint( @RequestParam String key, @RequestBody byte[] file ) throws IOException {
+    public byte[] addFingerprint( @RequestParam String key, @RequestBody byte[] file ) throws Exception {
        return signService.signDocument( key, file );
     }
 

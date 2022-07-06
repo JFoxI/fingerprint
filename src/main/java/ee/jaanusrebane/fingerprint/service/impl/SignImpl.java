@@ -20,7 +20,7 @@ import java.nio.file.StandardCopyOption;
 public class SignImpl implements Sign {
 
     @Override
-    public byte[] signDocument(String key, byte[] file) throws IOException {
+    public byte[] signDocument(String key, byte[] file) throws Exception {
         String text =  new String(file, StandardCharsets.UTF_8);
         String[] documentWithSignatureModified = text.split("%C2%A0");
         String[] documentWithSignatureUnmodified = text.split("\u00A0");

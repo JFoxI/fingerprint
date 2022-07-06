@@ -5,7 +5,7 @@ package ee.jaanusrebane.fingerprint.util;
  */
 public class EncodeMapper {
 
-    public static String encodeText(String input) {
+    public static String encodeText(String input) throws Exception {
         char[] chars = input.toCharArray();
         StringBuilder result = new StringBuilder("\u00A0");
         for (char ch: chars) {
@@ -61,6 +61,8 @@ public class EncodeMapper {
                 result.append('\u001B');
             } else if (ch == 'z') {
                 result.append('\u001C');
+            } else {
+                throw new Exception("Bad input");
             }
         }
         return result.toString();
