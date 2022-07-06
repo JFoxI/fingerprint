@@ -18,3 +18,6 @@ curl --request POST 'http://localhost:8080/identify' --data-binary '<path-to-fil
 curl --request POST 'http://localhost:8080/identify' --data-binary '@/Users/jaanusrebane/Desktop/newtest.txt'
   
   returns key_text
+
+7. Key value allowed a-z Otherwise Runtime Exception Bad input.
+8. Only 1 fingerprint is allowed for document. Otherwise Runtime Exception Document is inappropriate for process.
